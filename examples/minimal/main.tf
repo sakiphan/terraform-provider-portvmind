@@ -15,7 +15,10 @@ variable "portvmind_endpoint" { type = string }
 variable "portvmind_auth_url" { type = string }
 
 variable "portvmind_user_name" { type = string }
-variable "portvmind_password" { type = string sensitive = true }
+variable "portvmind_password" {
+  type      = string
+  sensitive = true
+}
 variable "portvmind_user_domain_name" { type = string }
 
 # Keystone project scope: set exactly one of tenant name or project UUID.
